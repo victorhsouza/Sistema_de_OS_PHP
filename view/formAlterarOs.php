@@ -1,8 +1,9 @@
 <?php 
-$id = $_GET['id'];
+$id = $_GET['id_os'];
 require_once '../dao/osDAO.php';
 $osDAO = new osDAO();
 $os = $osDAO->getOsById($id);
+print_r($os);
 
 ?>
 <!DOCTYPE html>
@@ -15,9 +16,9 @@ $os = $osDAO->getOsById($id);
 </head>
 <body> 
 <h1>Alterar OS</h1>
-    <form action="../controller/alterarOsController.php" method="post">
-
-        <input> 
+    <form action="../controller/alterarOsController.php" method="POST">
+        <label> Numero da OS: </label>
+        <input type="hidden" name="id" value= "<?php echo $id  ?>" > 
 
         <div>
             <label for="">Marca: </label>

@@ -42,7 +42,7 @@
             echo   "<td> {$unidade["preco"]} </td>";
             echo   "<td> {$unidade["data_i"]} </td>";
             echo   "<td> {$unidade["data_f"]} </td>";
-            echo   "<td> <a href = 'formAlterarOs.php?id={$unidade['id_os']}'>alterar</a> </td>";
+            echo   "<td> <a href = 'formAlterarOs.php?id_os={$unidade['id_os']}'>alterar</a> </td>";
             echo   "<td> <a href= '../controller/excluirClienteController.php?' onclick=' return excluir()'>Finalizar </a> </td>";
             echo "</tr>";
         }

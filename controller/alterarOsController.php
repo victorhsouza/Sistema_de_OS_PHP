@@ -2,6 +2,7 @@
 require_once '../dao/osDAO.php';
 require_once '../dto/osDTO.php';
 
+$id = $_POST['id'];
 $marca = $_POST['marca'];
 $modelo = $_POST['modelo'];
 $tipo = $_POST['tipo'];
@@ -13,6 +14,7 @@ $dataf = $_POST['dataf'];
 
 $osDTO = new osDTO();
 $osDTO->setMarca($marca);
+$osDTO->setId_os($id);
 $osDTO->setModelo($modelo);
 $osDTO->setTipo($tipo);
 $osDTO->setDefeito($defeito);
@@ -24,10 +26,12 @@ $osDTO->setData_f($dataf);
 $osDAO = new osDAO();
 $ok = $osDAO->alterarOs($osDTO);
 
-
-    echo "
+     if($ok){
+          echo "
            <script>
                 alert('OS alterada com sucesso')
                 window.location = '../view/listarAllOs.php'
            </script>
     ";
+     }
+    
