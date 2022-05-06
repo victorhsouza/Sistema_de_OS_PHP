@@ -11,5 +11,7 @@
     <a href="view/listarAllCliente.php"> listar Clientes</a> <br>
     <a href="view/formCadastrarOs.php"> Cadastrar Ordem de serviço</a> <br>
     <a href="view/listarAllOs.php"> Listar Ordem de serviço</a> <br>
+    <a href="view/formCadastrarFuncionario.php"> Cadastrar Funcionario</a> <br>
+    <a href="view/listarAllfuncionario.php"> Lista Funcionario</a> <br>
 </body>
 </html>

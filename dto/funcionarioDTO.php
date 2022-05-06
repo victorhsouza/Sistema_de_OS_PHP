@@ -5,6 +5,7 @@ class funcionarioDTO{
     private $nome;
     private $cargo;
     private $sexo;
+    private $datanasc;
 
 
     
@@ -58,6 +59,20 @@ class funcionarioDTO{
     public function setSexo($sexo)
     {
         $this->sexo = $sexo;
+
+        return $this;
+    }
+
+
+    public function getDatanasc()
+    {
+        return $this->datanasc;
+    }
+
+
+    public function setDatanasc($datanasc)
+    {
+        $this->datanasc = $datanasc;
 
         return $this;
     }
