@@ -14,6 +14,7 @@ $funcionario = $funcionarioDAO->getFuncionarioById($cpf);
     <title>Formulario</title>
 </head>
 <body> 
+<h1>Alterar dados do Funcionario</h1>
     <form action="../controller/alterarFuncionarioController.php" method="post">
         <div>
             <label for="nome">Nome:</label>

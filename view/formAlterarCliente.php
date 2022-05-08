@@ -14,6 +14,7 @@ $cliente = $clienteDAO->getClienteById($cpf);
     <title>Formulario</title>
 </head>
 <body> 
+    <h1>Alterar dados do cliente</h1>
     <form action="../controller/alterarClienteController.php" method="post">
         <div>
             <label for="nome">Nome:</label>

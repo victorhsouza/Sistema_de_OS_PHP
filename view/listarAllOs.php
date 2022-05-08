@@ -15,6 +15,7 @@
     $todos = $os->getAllOs();
 
     ?>
+    <h1>Ordem de serviço</h1>
     <table border="1">
 
         <tr>

@@ -1,4 +1,5 @@
 <?php 
+    
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,6 +10,7 @@
     <title>Formulario</title>
 </head>
 <body>
+<h1>Cadastro de cliente</h1>
     <form action="../controller/cadastrarClienteController.php" method="post">
         <div>
             <label for="">Nome:</label>

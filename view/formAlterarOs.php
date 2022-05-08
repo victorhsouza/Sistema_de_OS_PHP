@@ -18,7 +18,7 @@ print_r($os);
 <h1>Alterar OS</h1>
     <form action="../controller/alterarOsController.php" method="POST">
         <label> Numero da OS: </label>
-        <input type="hidden" name="id" value= "<?php echo $id  ?>" > 
+        <input type="hidden" name="id" value= "<?php echo $id  ?> read-only" > 
 
         <div>
             <label for="">Marca: </label>

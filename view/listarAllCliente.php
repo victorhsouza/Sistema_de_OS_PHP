@@ -14,6 +14,7 @@
     $todos = $clientes->getAllCliente();
 
     ?>
+    <h1>Clientes</h1>
     <table border="1">
 
         <tr>

@@ -9,6 +9,7 @@
     <title>Formulario de funcionario</title>
 </head>
 <body>
+<h1>Cadastro de Funcionarios</h1>
     <form action="../controller/cadastrarFuncionarioController.php" method="post">
         <div>
             <label for="">Nome:</label>
