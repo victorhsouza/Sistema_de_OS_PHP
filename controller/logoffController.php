@@ -1,8 +1,7 @@
 <?php 
-
 session_start();
 session_destroy();
-
-echo "<a href = '../view/formLogin.php'> clique aqui</a> ";
-
+    echo "<script>";
+    echo " window.location='../view/formLogin.php'";
+    echo "</script>";  
 ?>
