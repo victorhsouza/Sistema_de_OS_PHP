@@ -7,24 +7,23 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de funcionario</title>
+    <link rel="stylesheet" href="../css/styleForm.css">
 </head>
 <body>
-<h1>Cadastro de Funcionarios</h1>
+    <div class="container">
+    <h1>Cadastro de Funcionarios</h1>
     <form action="../controller/cadastrarFuncionarioController.php" method="post">
         <div>
-            <label for="">Nome:</label>
-        <input type="text" name="nome" id="nome">
+        <input type="text" name="nome" id="nome" class="input" placeholder="Nome e Sobrenome">
         </div>
         <br>
         <div>
-            <label for="">CPF:</label>
-        <input type="text" name="cpf" id="cpf">
+        <input type="text" name="cpf" id="cpf" class="input" placeholder="CPF">
         </div>
         <br>
 
         <div>
-            <label for="">Cargo:</label>
-        <input type="text" name="cargo" id="nome">
+        <input type="text" name="cargo" id="nome" class="input" placeholder="Cargo Ocupado">
         </div>
         <br>
         <div>
@@ -36,13 +35,16 @@
         <input type="radio" name="sexo" value="F" id="f">
        </div> 
         
-       <p>Data de nascimento: </p>
+       
        <div>
+       Data de nascimento: 
         <input type="date" name="data" id="data">
        </div>
-        <div><input type="submit" value="Cadastrar"></div>
 
-
+        <div><input type="submit" value="Cadastrar" id="submit"></div>
     </form>
+
+    </div>
+
 </body>
 </html>

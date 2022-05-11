@@ -5,6 +5,8 @@
         case 'Administrador':
             echo "<a href='view/formCadastrarCliente.php'> Cadastrar Cliente</a> <br>";
             echo "<a href='view/listarAllCliente.php'> listar Clientes </a> <br>";
+            echo "<a href='view/formCadastrarFuncionario.php'> Cadastrar Funcionario</a> <br>";
+            echo "<a href='view/listarAllfuncionario.php'> Lista Funcionario</a> <br>";
             break;
 
         case 'Funcionario':

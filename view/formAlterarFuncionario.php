@@ -12,28 +12,27 @@ $funcionario = $funcionarioDAO->getFuncionarioById($cpf);
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../css/styleForm.css">
 </head>
 <body> 
-<h1>Alterar dados do Funcionario</h1>
+    <div class="container">
+    <h1>Alterar dados do Funcionario</h1>
     <form action="../controller/alterarFuncionarioController.php" method="post">
         <div>
-            <label for="nome">Nome:</label>
-        <input type="text" name="nome" id="nome" value="<?php echo $funcionario['nome'] ?>">
+        <input type="text" name="nome" id="nome" class="input" value="<?php echo $funcionario['nome'] ?>">
         </div>
         <br>
         <div>
-            <label for="cpf">CPF:</label>
-        <input type="text" name="cpf" id="cpf" value="<?php echo $funcionario['cpf'] ?>">
+        <input type="text" name="cpf" id="cpf" class="input" value="<?php echo $funcionario['cpf'] ?>">
         </div>
 
         <div>
-            <label for="nome">Cargo:</label>
-        <input type="text" name="cargo" id="cargo" value="<?php echo $funcionario['cargo']?>">
+        <input type="text" name="cargo" id="cargo" class="input" value="<?php echo $funcionario['cargo']?>">
         </div>
         <br>
         
-        <p>Sexo: </p>
-       <div>
+        <div>
+           <p>Sexo: </p>
            
         <label for="m">Masculino</label>
         <input type="radio" name="sexo" value="M" id="m" <?php echo $funcionario['sexo'] == 'M'? 'checked': '' ?> >
@@ -41,14 +40,18 @@ $funcionario = $funcionarioDAO->getFuncionarioById($cpf);
         <input type="radio" name="sexo" value="F" id="f" <?php echo $funcionario ['sexo']== 'F'? 'checked': '' ?>>
        </div> 
         
-       <p>Data de nascimento: </p>
+       
        <div>
+        Data de nascimento:
         <input type="date" name="data" id="data" value="<?php echo $funcionario['datanasc'] ?>">
        </div>
         <br>
 
-        <div><input type="submit" value="Alterar"></div>
+        <div><input type="submit" value="Alterar" id="submit"></div>
 
     </form>
+    </div>
+
+
 </body>
 </html>

@@ -7,53 +7,50 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordem de Serviço</title>
+    <link rel="stylesheet" href="../css/styleForm.css">
+    <style>
+      .input{
+          margin-bottom: 10px;
+      }
+    </style>
 </head>
 <body>
+    <div class="container">
     <h1>Cadastro de OS</h1>
     <form action="../controller/cadastrarOsController.php" method="post">
         <div>
-            <label for="">Marca: </label>
-        <input type="text" name="marca" id="marca">
+        <input type="text" name="marca" id="marca" placeholder="Marca do aparelho" class="input">
         </div>
-        <br>
         <div>
-            <label for="">Modelo:</label>
-        <input type="text" name="modelo" id="modelo">
+        <input type="text" name="modelo" id="modelo" placeholder="Modelo do aparelho" class="input">
         </div>
-        <br>
 
         <div>
-            <label for="">Tipo:</label>
-        <select name="tipo" id="tipo">
-            <option value="Celular">Celular</option>
-            <option value="Desktop">Desktop</option>
-            <option value="Notebook">Notebook</option>
-        </select>
+            <select name="tipo" id="tipo" class="input">
+                <option value="Celular" class="input">Celular</option>
+                <option value="Desktop" class="input">Desktop</option>
+                <option value="Notebook" class="input">Notebook</option>
+            </select>
         </div>
-        <br>
 
-        <label for=""><p>Defeito</p></label>
-        <textarea name="defeito" id="defeito" cols="30" rows="5"></textarea>
+        <div>
+            <textarea name="defeito" id="defeito" cols="30" rows="5" placeholder="Defeito e condiçoes do aparelho"></textarea>
+        </div>
 
-        <br>
-
-        <label for=""><p>Soluçao</p></label>
-        <textarea name="solucao" id="solucao" cols="30" rows="5" value="TEste de valor"> </textarea>
-        <br>
-
-        <label for=""><p>Valor do reparo: </p></label>
-        <input type="text" name="preco" id="preco">
-       
-        <br>
+        <div>
+        <textarea name="solucao" id="solucao" cols="30" rows="5" placeholder="Soluçao encontrada"></textarea>
+        </div>
         
-        <label>Data de entrada: </label>
+        <input type="text" name="preco" id="preco" placeholder="Valor do Reparo" class="input"> 
+        
        <div>
+        <label>Data de entrada: </label>
         <input type="date" name="data" id="data">
        </div>
-
-        <br>
         
-        <div><input type="submit" value="Cadastrar"></div>
+        <div><input type="submit" value="Cadastrar" id="submit"></div>
     </form>
+    </div>
+    
 </body>
 </html>
