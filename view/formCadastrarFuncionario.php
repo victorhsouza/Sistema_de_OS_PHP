@@ -26,6 +26,24 @@
         <input type="text" name="cargo" id="nome" class="input" placeholder="Cargo Ocupado">
         </div>
         <br>
+
+        <div>
+        <input type="text" name="usuario" id="usuario" class="input" placeholder="Usuario">
+        </div>
+
+        <div>
+        <input type="text" name="senha" id="senha" class="input" placeholder="Senha">
+        </div>
+        <br>
+        <br>
+
+        <div>
+       <select name="perfil">
+           <option value="1"> Administrador </option>
+           <option value="2"> Funcionario </option>
+       </select>
+        </div>
+        <br>
         <div>
         Sexo:
        

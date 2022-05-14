@@ -12,7 +12,6 @@
     require_once '../dao/clienteDAO.php';
     $clientes = new clienteDAO();
     $todos = $clientes->getAllCliente();
-
     ?>
     <h1>Clientes</h1>
     <table border="1">

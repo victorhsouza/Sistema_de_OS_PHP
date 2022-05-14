@@ -8,10 +8,18 @@ include 'login/validaLogin.php';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Vitec Informatic</title>
+    <link rel="stylesheet" href="css/styleIndex.css">
 </head>
 <body>
-    <?php 
+  <header>
+    <h1>Vitec informatica</h1>
+    <h2> Seja bem vindo "<?php echo $_SESSION['usuario']  ?>"</h2>
+  </header>
+
+  <main>
+  <div class="container">
+  <?php 
     include 'view/menu.php';
     ?>
 
@@ -23,9 +31,21 @@ include 'login/validaLogin.php';
     <a href="view/listarAllfuncionario.php"> Lista Funcionario</a> <br>
     <a href="view/formLogin.php"> Login</a> <br><-->
     
-  <a href="controller/logoffController.php"> logout</a> <br> 
+   
 
-    <p> <?php  echo $_SESSION['perfil'] ?></p>
+    
+  </div>
+  <a href="controller/logoffController.php" id="logout"> logout</a> <br>
+  <a href="view/sobreNos.php" > Sobre nos</a> <br>
+
+  </main>
+  
+    <footer>
+      <p>Perfil: <b><?php  echo $_SESSION['perfil'] ?></b></p>
+        &copy; Vitec Informatic 
+        
+    </footer>
+    
 
 
 

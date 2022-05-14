@@ -11,14 +11,47 @@ class funcionarioDAO{
         $cargo = $funcionarioDTO->getCargo();
         $sexo = $funcionarioDTO->getSexo();
         $datanasc = $funcionarioDTO->getDatanasc();
+        $usuario = $funcionarioDTO->getUsuario();
+        $senha = $funcionarioDTO->getSenha();
+        $perfil = $funcionarioDTO->getPerfil();
+        
 
         //conexao com o banco
         $bd = new Conexao();
         $conexao =  $bd->getInstance();
-        $sql = $conexao->query("insert into funcionario values ('$cpf','$nome','$cargo','$sexo','$datanasc')");
 
+        $stmt = $conexao->prepare("insert into usuario values(?, ?, ?)");
+        $stmt->bind_param('ssi',$user,$pass,$perfil_idperfil);
+        $user = $usuario;
+        $pass = $senha;
+        $perfil_idperfil = $perfil;
+        $stmt->execute();
+
+        $idusuario = $conexao->insert_id;
+
+        $sql = $conexao->query("insert into funcionario value ('$cpf','$nome','$cargo','$sexo','$datanasc', $idusuario)");
         return $sql;
+
+        if(!$sql){
+            $mg =  $conexao->error;
+            echo $mg;
+        }
         
+    }
+
+    function setUsuario($usuario,$senha,$perfil){
+        /*$usuario = $funcionarioDTO->getUsuario();
+        $senha = $funcionarioDTO->getSenha();
+        $perfil = $funcionarioDTO->getPerfil();*/
+        $bd = new Conexao();
+        $conexao =  $bd->getInstance();
+        $sql = $conexao->query("insert into usuario values('$usuario', '$senha', $perfil)");
+        return $sql;
+        if(!$sql){
+            $mg =  $conexao->error;
+            echo $mg;
+        }
+
     }
 
     function getAllFuncionario(){

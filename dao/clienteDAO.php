@@ -2,7 +2,7 @@
 require_once '../dao/conexao/conexao.php';
 class clienteDAO{
     
-    public function salvar(clienteDTO $clienteDTO){
+    public function salvar( $clienteDTO){
         $nome = $clienteDTO->getNome();
         $cpf = $clienteDTO->getCpf();
         $sexo = $clienteDTO->getSexo();
@@ -43,7 +43,7 @@ class clienteDAO{
         $conexao = new mysqli("localhost", "root", "", "vitecinformatic");
        $alterar =  $conexao->query("update cliente set nome = '$nome', datanasc= '$datanasc', sexo = '$sexo' where cpf = '$cpf';  ");
        if(!$alterar){
-        echo  $conexao->error;
+        echo $conexao->error;
        }
         return $alterar;
     }
