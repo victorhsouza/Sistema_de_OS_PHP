@@ -11,15 +11,17 @@ class clienteDAO{
 
         //INSERINDO NO BD
         $conexao = new mysqli("localhost", "root", "", "vitecinformatic");
-       $cadastro =  $conexao->query("insert into cliente value ('$cpf','$nome','$datanasc','$sexo')");
-        if(!$cadastro){
-          echo " <script> 
-                        document.alert('CPF ja cadastrado!')
-                        window.location = '../view/formCadastrarCliente.php
-                </script>";
-        }
-
-        return $cadastro;
+        $stmt = $conexao->prepare("insert into cliente values (?,?,?,?)");
+        $stmt->bind_param('ssis',$cpf,$nome,$datanasc,$sexo);
+        $return =  $stmt->execute();
+        return $return;
+        if(!$return){
+            echo " <script> 
+                          document.alert('CPF ja cadastrado!')
+                          window.location = '../view/formCadastrarCliente.php
+                  </script>";
+          }
+    
     }
 
  

@@ -18,34 +18,23 @@ echo "$senha <br>";
 echo "$perfil <br>";
 
 
-$funcionarioDTO = new funcionarioDTO();
-$nome = $funcionarioDTO->setNome($nome);
-$cpf = $funcionarioDTO->setCpf($cpf);
-$cargo = $funcionarioDTO->setCargo($cargo);
-$usuario = $funcionarioDTO->setUsuario($usuario);
-$senha = $funcionarioDTO->setSenha($senha);
-$perfil = $funcionarioDTO->setPerfil($perfil);
-$sexo = $funcionarioDTO->setSexo($sexo);
-$datanasc = $funcionarioDTO->setDatanasc($datanasc);
+ $funcionarioDTO = new funcionarioDTO();
+ $funcionarioDTO->setNome($nome);
+ $funcionarioDTO->setCpf($cpf);
+ $funcionarioDTO->setCargo($cargo);
+ $funcionarioDTO->setUsuario($usuario);
+ $funcionarioDTO->setSenha($senha);
+ $funcionarioDTO->setPerfil($perfil);
+ $funcionarioDTO->setSexo($sexo);
+ $funcionarioDTO->setDatanasc($datanasc);
 
 $funcionarioDAO = new funcionarioDAO();
-$salvar = $funcionarioDAO->salvar($funcionarioDTO);
-$user = $funcionarioDAO->setUsuario($funcionarioDTO);
-        if($salvar && $user){
-            echo "
-            <script>
-                alert('Funcionario cadastrado com sucesso')
-                window.location = '../view/listarAllFuncionario.php
-            </script>    
-        ";
-        }else{
-            echo "Deu bom nao";
-            $bd = new Conexao();
-            $conexao = $bd->getInstance();
-            if(!isset($conexao->connect_errno)){
-                return $conexao->error;
-            }
-        }
+$funcionarioDAO->salvar($funcionarioDTO);
+
+    echo "<script> alert('Funcionario cadastrado com sucesso1') 
+                    window.location='../view/listarAllfuncionario.php'
+    </script>";
+        
         
         
         

@@ -5,52 +5,51 @@ require_once '../dao/conexao/conexao.php';
 class funcionarioDAO{
 
     public function salvar(funcionarioDTO $funcionarioDTO){
+        try {
+                $nome = $funcionarioDTO->getNome();
+                $cpf = $funcionarioDTO->getCpf();
+                $cargo = $funcionarioDTO->getCargo();
+                $sexo = $funcionarioDTO->getSexo();
+                $datanasc = $funcionarioDTO->getDatanasc();
+                $usuario = $funcionarioDTO->getUsuario();
+                $senha = $funcionarioDTO->getSenha();
+                $perfil = $funcionarioDTO->getPerfil();
+                
+                $bd = new Conexao();
+                $conexao =  $bd->getInstance();
+                
+                $sqli = $conexao->prepare("insert into usuario (user,pass,perfil_idperfil) values (?,?,?)");
+                $sqli->bind_param('ssi', $usuario,$senha,$perfil);
+                $sqli->execute();
+                
+                $idusuario = $conexao->insert_id;
+                
+                
 
+                $sqli2 = $conexao->prepare("insert into funcionario value (?,?,?,?,?,?)");
+                $sqli2->bind_param('ssssii',$cpf,$nome,$cargo,$sexo,$datanasc,$idusuario);
+                $final= $sqli2->execute();
+                return $final;
+
+                if(!$final){
+                    echo " <script> 
+                                  document.alert('CPF ja cadastrado!')
+                                  window.location = '../view/formCadastrarFuncionario.php'
+                          </script>";
+                  }
+        
      
-        $nome = $funcionarioDTO->getNome();
-        $cpf = $funcionarioDTO->getCpf();
-        $cargo = $funcionarioDTO->getCargo();
-        $sexo = $funcionarioDTO->getSexo();
-        $datanasc = $funcionarioDTO->getDatanasc();
-        
-        $bd = new Conexao();
-        $conexao =  $bd->getInstance();
-
-        //$idusuario = $conexao->insert_id;
-
-        $sql = $conexao->query("insert into funcionario value ('$cpf','$nome','$cargo','$sexo','$datanasc', default)");
-        return $sql;
-
-        if(!$sql){
-            $mg =  $conexao->connect_error;
-            echo $mg;
+        } catch (mysqli_sql_exception $e) {
+            $error = $e->getMessage();
+            echo $error;
         }
+     
+        
+            
         
     }
 
-    function setUsuario(funcionarioDTO $funcionarioDTO){
-        $usuario = $funcionarioDTO->getUsuario();
-        $senha = $funcionarioDTO->getSenha();
-        $perfil = $funcionarioDTO->getPerfil();
-        
-
-        //conexao com o banco
-        $bd = new Conexao();
-        $conexao =  $bd->getInstance();
-
-        $ex = $conexao->query("insert into usuario values(default,'$usuario','$senha',$perfil)");
-        return $ex;
-
-
-        /*$stmt = $conexao->prepare("insert into usuario values (?, ?, ?)");
-        $stmt->bind_param('ssi',$user,$pass,$perfil_idperfil);
-        $user = $usuario;
-        $pass = $senha;
-        $perfil_idperfil = $perfil;
-        return $stmt->execute();*/
-
-    }
-
+    
     function getAllFuncionario(){
         $bd = new Conexao();
         $conexao =  $bd->getInstance();
