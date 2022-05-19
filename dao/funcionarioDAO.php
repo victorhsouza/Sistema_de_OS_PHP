@@ -24,8 +24,6 @@ class funcionarioDAO{
                 
                 $idusuario = $conexao->insert_id;
                 
-                
-
                 $sqli2 = $conexao->prepare("insert into funcionario value (?,?,?,?,?,?)");
                 $sqli2->bind_param('ssssii',$cpf,$nome,$cargo,$sexo,$datanasc,$idusuario);
                 $final= $sqli2->execute();
@@ -42,11 +40,7 @@ class funcionarioDAO{
         } catch (mysqli_sql_exception $e) {
             $error = $e->getMessage();
             echo $error;
-        }
-     
-        
-            
-        
+        }    
     }
 
     

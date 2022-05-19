@@ -9,7 +9,7 @@ class LoginDAO{
 
         $sql = $conexao->query("select u.user, p.nome from usuario u inner join perfil p 
         on u.perfil_idperfil = p.idperfil
-        where u.user= '$usuario' and u.pass= '$senha' ;");
+        where u.user = '$usuario' and u.pass= '$senha' ;");
 
         $assoc = $sql->fetch_assoc();
         return $assoc;

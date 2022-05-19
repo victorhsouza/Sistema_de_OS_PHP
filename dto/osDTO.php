@@ -7,6 +7,7 @@ class osDTO{
     private $tipo;
     private $defeito;
     private $solucao;
+    private $cliente_cpf;
     private $preco;
     private $data_i;
     private $data_f;
@@ -137,6 +138,26 @@ class osDTO{
     public function setPreco($preco)
     {
         $this->preco = $preco;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of cliente_cpf
+     */ 
+    public function getCliente_cpf()
+    {
+        return $this->cliente_cpf;
+    }
+
+    /**
+     * Set the value of cliente_cpf
+     *
+     * @returnself
+     */ 
+    public function setCliente_cpf($cliente_cpf)
+    {
+        $this->cliente_cpf = $cliente_cpf;
 
         return $this;
     }

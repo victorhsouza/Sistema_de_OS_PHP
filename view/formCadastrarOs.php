@@ -40,6 +40,10 @@
         <div>
         <textarea name="solucao" id="solucao" cols="30" rows="5" placeholder="Soluçao encontrada"></textarea>
         </div>
+
+        <div>
+        <input type="text" name="cliente_cpf" id="cliente_cpf" placeholder="CPF do cliente" class="input">
+        </div>
         
         <input type="text" name="preco" id="preco" placeholder="Valor do Reparo" class="input"> 
         

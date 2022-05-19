@@ -8,6 +8,7 @@ $modelo = $_POST['modelo'];
 $tipo = $_POST['tipo'];
 $defeito = $_POST['defeito'];
 $solucao = $_POST['solucao'];
+$cliente_cpf = $_POST['cliente_cpf'];
 $preco = $_POST['preco'];
 $datai = $_POST['data'];
 
@@ -17,6 +18,7 @@ $osDTO->setModelo($modelo);
 $osDTO->setTipo($tipo);
 $osDTO->setDefeito($defeito);
 $osDTO->setSolucao($solucao);
+$osDTO->setCliente_cpf($cliente_cpf);
 $osDTO->setPreco($preco);
 $osDTO->setData_i($datai);
 

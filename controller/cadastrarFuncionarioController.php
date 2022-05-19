@@ -8,14 +8,11 @@ $nome = $_POST['nome'];
 $cpf = $_POST['cpf'];
 $cargo = $_POST['cargo'];
 $usuario = $_POST['usuario'];
-$senha = $_POST['senha'];
+$senha = md5($_POST['senha']);
+
 $perfil = $_POST['perfil'];
 $sexo = $_POST['sexo'];
-$datanasc = $_POST['data'];
-
-echo "$usuario <br>"; 
-echo "$senha <br>";
-echo "$perfil <br>";
+$datanasc = date($_POST['data']);
 
 
  $funcionarioDTO = new funcionarioDTO();

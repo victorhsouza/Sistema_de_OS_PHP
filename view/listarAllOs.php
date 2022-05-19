@@ -26,6 +26,7 @@
             <td>Defeito</td>
             <td>Soluçao</td>
             <td>Preço</td>
+            <td>Cliente</td>
             <td>Data de entrada</td>
             <td>Data de saida</td>
             <td>alterar</td>
@@ -41,6 +42,7 @@
             echo   "<td> {$unidade["defeito"]} </td>";
             echo   "<td> {$unidade["solucao"]} </td>";
             echo   "<td> {$unidade["preco"]} </td>";
+            echo   "<td> {$unidade["nome"]} </td>";
             echo   "<td> {$unidade["data_i"]} </td>";
             echo   "<td> {$unidade["data_f"]} </td>";
             echo   "<td> <a href = 'formAlterarOs.php?id_os={$unidade['id_os']}'>alterar</a> </td>";
