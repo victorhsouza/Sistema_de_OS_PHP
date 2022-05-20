@@ -11,6 +11,7 @@
     <a href= "../index.php">Inicio</a>
     <?php 
     require_once '../dao/osDAO.php';
+    require_once '../js/funcaoDAta.php';
     $os = new osDAO();
     $todos = $os->getAllOs();
 

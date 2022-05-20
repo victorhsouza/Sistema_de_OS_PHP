@@ -10,6 +10,7 @@ $cargo = $_POST['cargo'];
 $usuario = $_POST['usuario'];
 $senha = md5($_POST['senha']);
 
+
 $perfil = $_POST['perfil'];
 $sexo = $_POST['sexo'];
 $datanasc = date($_POST['data']);

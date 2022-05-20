@@ -1,3 +1,6 @@
+<?php 
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -25,12 +28,13 @@
             <td>excluir</td>
         </tr>
         <?php 
+        require_once '../js/funcaoData.php';
         foreach($todos as $cliente){
             echo "<tr>";
             echo   "<td> {$cliente["cpf"]} </td>";
             echo   "<td> {$cliente["nome"]} </td>";
             echo   "<td> {$cliente["sexo"]} </td>";
-            echo   "<td> {$cliente ["datanasc"]} </td>";
+            echo   "<td>", dataUsaToBr($cliente["datanasc"]) ," </td>";
             echo   "<td> <a href = 'formAlterarCliente.php?cpf={$cliente["cpf"]}'>alterar</a> </td>";
             echo   "<td> <a href= '../controller/excluirClienteController.php?cpf={$cliente["cpf"]}' onclick=' return excluir()'>excluir</a> </td>";
             echo "</tr>";
