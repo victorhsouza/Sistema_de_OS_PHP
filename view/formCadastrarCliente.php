@@ -8,6 +8,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
+
     <style>
         
 body{
@@ -79,9 +81,9 @@ h1{
 
             <div class="sexo">
             Sexo:
-            <label for="m"> Masculino </label>
+            <label for="m" style="color:white"> Masculino </label>
             <input type="radio" name="sexo" value="M" id="m">
-            <label for="f"> Feminino </label>
+            <label for="f" style="color:white"> Feminino </label>
             <input type="radio" name="sexo" value="F" id="f">
            </div> 
             <br>
@@ -97,6 +99,8 @@ h1{
         </form>
     </div>
 
-    
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>   
 </body>
 </html>

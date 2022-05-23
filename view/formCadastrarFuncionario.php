@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de funcionario</title>
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
     <style>
       body{
             font-family: arial;
@@ -66,30 +67,27 @@ h1{
     <h1>Cadastro de Funcionarios</h1>
     <form action="../controller/cadastrarFuncionarioController.php" method="post">
         <div>
-        <input type="text" name="nome" id="nome" class="input" placeholder="Nome e Sobrenome">
+        <input type="text" name="nome" id="nome" class="input" placeholder="Nome e Sobrenome" required>
         </div>
-        <br>
         <div>
-        <input type="text" name="cpf" id="cpf" class="input" placeholder="CPF">
-        </div>
-        <br>
-
-        <div>
-        <input type="text" name="cargo" id="nome" class="input" placeholder="Cargo Ocupado">
-        </div>
-        <br>
-
-        <div>
-        <input type="text" name="usuario" id="usuario" class="input" placeholder="Usuario">
+        <input type="text" name="cpf" id="cpf" class="input cpf-mask" placeholder="CPF" required>
         </div>
 
         <div>
-        <input type="text" name="senha" id="senha" class="input" placeholder="Senha">
+        <input type="text" name="cargo" id="nome" class="input" placeholder="Cargo Ocupado" required >
+        </div>
+
+        <div>
+        <input type="text" name="usuario" id="usuario" class="input" placeholder="Usuario" required maxlength="10">
+        </div>
+
+        <div>
+        <input type="text" name="senha" id="senha" class="input" placeholder="Senha" required>
         </div>
         <br>
 
         <div>
-       <select name="perfil" id="perfil">
+       <select name="perfil" id="perfil" required>
            <option value="1"> Administrador </option>
            <option value="2"> Funcionario </option>
        </select>
@@ -97,9 +95,9 @@ h1{
         <br>
         <div>
         Sexo:
-        <label for="m">Masculino</label>
+        <label for="m" style="color:white">Masculino</label>
         <input type="radio" name="sexo" value="M" id="m">
-        <label for="f">Feminino</label>
+        <label for="f" style="color:white">Feminino</label>
         <input type="radio" name="sexo" value="F" id="f">
        </div> 
         <br>
@@ -115,5 +113,8 @@ h1{
 
     </div>
 
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>   
 </body>
 </html>

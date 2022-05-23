@@ -7,18 +7,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ordem de Serviço</title>
-    <link rel="stylesheet" href="../css/styleForm.css">
+    <link rel="stylesheet" type="text/css" href="//assets.locaweb.com.br/locastyle/2.0.6/stylesheets/locastyle.css">
     <style>
       body{
             font-family: arial;
             background-image: linear-gradient(to right, blue, dodgerblue);
             color: white;
-}
+
+        }
 .container{
     background-color: rgba(0,0,0, 0.7);
     position: absolute;
-    top: 60%;
-    left: 50%;
+    top: 5%;
+    left: 27%;
     padding: 30px;
     border-radius: 20px;
     color: white;
@@ -83,26 +84,34 @@ h1{
         <br>
         <div>
             <textarea name="defeito" id="defeito" cols="30" rows="5" placeholder="Defeito e condiçoes do aparelho"></textarea>
+
+            <textarea name="solucao" id="solucao" cols="30" rows="5" placeholder="Soluçao encontrada"></textarea>
         </div>
 
-        <div>
-        <textarea name="solucao" id="solucao" cols="30" rows="5" placeholder="Soluçao encontrada"></textarea>
-        </div>
+    
 
         <div>
         <input type="text" name="cliente_cpf" id="cliente_cpf" placeholder="CPF do cliente" class="input">
         </div>
         
         <input type="text" name="preco" id="preco" placeholder="Valor do Reparo" class="input"> 
+        <br>
+        <br>
         
        <div>
-        <label>Data de entrada: </label>
+        <label style="color:white">Data de entrada: </label>
         <input type="date" name="data" id="data">
        </div>
+       <br>
+    
         
         <div><input type="submit" value="Cadastrar" id="submit"></div>
     </form>
     </div>
+
+    <script async="" src="//www.google-analytics.com/analytics.js"></script><script type="text/javascript" src="//code.jquery.com/jquery-2.0.3.min.js"></script>
+<script type="text/javascript" src="//assets.locaweb.com.br/locastyle/2.0.6/javascripts/locastyle.js"></script>
+<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>   
     
 </body>
 </html>
