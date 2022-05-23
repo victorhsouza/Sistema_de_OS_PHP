@@ -1,0 +1,41 @@
+
+body{
+    font-family: arial;
+    background-image: linear-gradient(to right, gray, yellow);
+}
+.container{
+    background-color: rgba(0,0,0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+}
+.input{
+    margin-top: 20px;
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+   
+}
+#submit{
+    width: 100%;
+    padding: 10px;
+    border: none;
+    background-color: dodgerblue;
+    cursor: pointer;
+    color: white;
+    border-radius: 20px;
+}
+
+#submit:hover{
+    background-color: deepskyblue;
+}
+input{
+    margin-top: 20px;
+}
+label{
+    margin-top: 20px;
+}

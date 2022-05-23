@@ -1,0 +1,59 @@
+body{
+    font-family: arial;
+    background-image: linear-gradient(to right, yellow, black);
+}
+
+div{
+     
+    border-radius: 15px;
+    display: inline-flex;
+    margin: 5px;
+    text-align: center;
+}
+
+.link {
+    background-color: dodgerblue;
+    border-radius: 15px;
+    padding: 15px;
+    color: white;
+    width: 120px;
+}
+
+.container{
+    background-color: rgba(0,0,0, 0.7);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+}
+.link:hover{
+    background-color: deepskyblue;
+}
+
+#logout{
+    background-color: black;
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+    position: absolute;
+    top: 30%;
+    left: 80%
+}
+
+footer{
+
+    text-align: center;
+    color: white;
+    position: absolute;
+    top: 70%;
+    left: 40%;
+}
+h2{
+    color: white;
+    position: absolute;
+    top: 27%;
+    left: 20%;
+}
